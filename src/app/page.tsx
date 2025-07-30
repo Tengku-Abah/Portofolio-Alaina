@@ -111,7 +111,7 @@ export default function Home() {
                         <img 
 
                         src="/FOTO_GW.PNG"
-                        alt="Alaina Atwa Awali Harahap"
+                        alt="no pictur"
                         style={{ fontWeight: 900, fontSize: "3rem", color: "#ffffff" ,marginTop: "-32px" }}>
 
                         </img>
