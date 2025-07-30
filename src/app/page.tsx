@@ -6,7 +6,6 @@ import BlurText from "@/components/Ui/BlurText";
 import SplitText from "@/components/Ui/SplitText";
 import AnimatedContent from "@/components/Ui/AnimatedContent";
 import PixelTransition from "@/components/Ui/PixelTransition";
-import Image from "next/image";
 
 
 
