@@ -5,6 +5,7 @@ import SkillCarousel2 from "@/components/Ui/SkillCarousel2";
 import BlurText from "@/components/Ui/BlurText";
 import SplitText from "@/components/Ui/SplitText";
 import AnimatedContent from "@/components/Ui/AnimatedContent";
+import PixelTransition from "@/components/Ui/PixelTransition";
 import Image from "next/image";
 
 
@@ -54,7 +55,7 @@ export default function Home() {
           <BlurText
           text="Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-          delay={30}
+          delay={10}
           animateBy="letters"
           direction="bottom"
           onAnimationComplete={handleAnimationComplete}
@@ -89,14 +90,39 @@ export default function Home() {
         <div className="h-[100vh] w-1/2 flex relative justify-center items-center items-start  rounded-[12px] m-2">
         <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
         <div className="flex h-[50vh] flex-col space-x-2 px-20 m-20 rounded-[12px] items-center bg-[#D9C79D] shadow-2xl justify-center ">
-              <div className=" group relative relative bg-[#502b0f] w-[200px] h-[250px] rounded-[12px] flex items-center justify-center mt-24 ">
-                <Image
-                  src="/FOTO_GW.PNG"
-                  alt="Alaina Atwa Awali Harahap"
-                  width={200}
-                  height={250}
-                  className="rounded-[12px] object-cover group-hover:scale-110 mb-8 "
-                />
+              <div className=" group relative relative  w-[200px] h-[250px] rounded-[12px] flex items-center justify-center mt-24 ">
+                <PixelTransition
+                    firstContent={
+                      <img
+                        src="FOTO GW.jpg"
+                        alt="default pixel transition content, a cat!"
+                        style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                      />
+                    }
+                    secondContent={
+                      <div
+                        style={{
+                          width: "100%",
+                          height: "100%",
+                          display: "grid",
+                          placeItems: "center",
+                          backgroundColor: "#7a4f2c"
+                        }}
+                      >
+                        <img 
+
+                        src="/FOTO_GW.PNG"
+                        alt="Alaina Atwa Awali Harahap"
+                        style={{ fontWeight: 900, fontSize: "3rem", color: "#ffffff" ,marginTop: "-32px" }}>
+
+                        </img>
+                      </div>
+                    }
+                    gridSize={20}
+                    pixelColor='#502b0f'
+                    animationStepDuration={0.4}
+                    className="custom-pixel-card"
+                  />
               </div>
               <p className="text-[#4b2e1e] text-left text-2xl font-bold font-serif text-center px-10 transition-transform duration-300 group-hover:scale-200 mt-4">
                 political science student
